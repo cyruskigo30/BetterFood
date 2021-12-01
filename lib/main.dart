@@ -12,6 +12,7 @@ class BetterFood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = BetterFoodTheme.light();
+    //? Apply home widget
     return MaterialApp(
       theme: theme,
       title: 'BetterFood',
