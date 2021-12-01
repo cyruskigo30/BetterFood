@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 import 'betterfood_theme.dart';
 
 void main() {
@@ -10,27 +11,11 @@ class BetterFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = FooderlichTheme.dark();
-    // TODO Apply home widget
+    final theme = BetterFoodTheme.light();
     return MaterialApp(
       theme: theme,
       title: 'BetterFood',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'BetterFood',
-            style: theme.textTheme.headline6,
-          ),
-        ),
-        body: SafeArea(
-          child: Center(
-            child: Text(
-              'Welcome to better food',
-              style: theme.textTheme.headline1,
-            ),
-          ),
-        ),
-      ),
+      home: const Home(),
     );
   }
 }
