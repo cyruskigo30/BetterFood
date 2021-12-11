@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'card1.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,12 +15,13 @@ class _HomeState extends State<Home> {
 
   // Here we define the widgets that will be displayed on each tab
   static List<Widget> pages = <Widget>[
-    Container(
-      color: Colors.redAccent,
-    ),
+    // card 1
+    const Card1(),
+    // TODO Replace with card 2
     Container(
       color: Colors.greenAccent,
     ),
+    // TODO Replace with card 3
     Container(
       color: Colors.blueAccent,
     ),
