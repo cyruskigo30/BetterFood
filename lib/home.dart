@@ -1,3 +1,4 @@
+import 'package:betterfood/card2.dart';
 import 'package:flutter/material.dart';
 import 'card1.dart';
 
@@ -17,10 +18,8 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     // card 1
     const Card1(),
-    // TODO Replace with card 2
-    Container(
-      color: Colors.greenAccent,
-    ),
+    //  card 2
+    const Card2(),
     // TODO Replace with card 3
     Container(
       color: Colors.blueAccent,
@@ -57,16 +56,19 @@ class _HomeState extends State<Home> {
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Card',
+            icon: Icon(Icons.home),
+            // card 1
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Card 1',
+            icon: Icon(Icons.person),
+            // card2
+            label: 'Account',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Card 2',
+            icon: Icon(Icons.settings),
+            // card3
+            label: 'Settings',
           ),
         ],
       ),
