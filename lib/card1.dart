@@ -18,7 +18,7 @@ class Card1 extends StatelessWidget {
           height: 450,
         ),
         decoration: const BoxDecoration(
-          color: Colors.blueGrey,
+          color: Colors.blue,
           image: DecorationImage(
             image: AssetImage('assets/images/image1.png'),
             fit: BoxFit.contain,

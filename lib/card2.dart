@@ -15,7 +15,7 @@ class Card2 extends StatelessWidget {
           height: 450,
         ),
         decoration: const BoxDecoration(
-          color: Colors.blueGrey,
+          color: Colors.blue,
           image: DecorationImage(
             image: AssetImage('assets/images/image2.png'),
             fit: BoxFit.cover,
@@ -25,14 +25,38 @@ class Card2 extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: const [
+          children: [
             // add author information
-            AuthorCard(
+            const AuthorCard(
               authorName: 'Cyrus Kigo',
               title: 'International Chef',
               imageProvider: AssetImage('assets/images/image1.png'),
             ),
-            // TODO add positioned text
+            //  add positioned text
+            Expanded(
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: 16,
+                    right: 16,
+                    child: Text(
+                      'Recipe',
+                      style: BetterFoodTheme.darkTextTheme.headline1,
+                    ),
+                  ),
+                  Positioned(
+                      bottom: 70,
+                      left: 16,
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: Text(
+                          'Smoothies',
+                          style: BetterFoodTheme.darkTextTheme.headline1,
+                        ),
+                      ))
+                ],
+              ),
+            )
           ],
         ),
       ),

@@ -21,7 +21,49 @@ class AuthorCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
-        children: [],
+        // add alignment
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              CircleImage(
+                imageProvider: imageProvider,
+                imageRadius: 28,
+              ),
+              const SizedBox(
+                width: 8,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    authorName,
+                    style: BetterFoodTheme.darkTextTheme.headline2,
+                  ),
+                  Text(
+                    title,
+                    style: BetterFoodTheme.darkTextTheme.headline3,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          // add IconButton
+          IconButton(
+              icon: const Icon(Icons.favorite_border),
+              iconSize: 30,
+              color: Colors.white,
+              onPressed: () {
+                const snackBar = SnackBar(
+                  backgroundColor: Colors.blueAccent,
+                  content: Text(
+                    'Account Liked',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              }),
+        ],
       ),
     );
   }
