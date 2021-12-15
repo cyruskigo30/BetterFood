@@ -1,6 +1,7 @@
-import 'package:betterfood/card2.dart';
 import 'package:flutter/material.dart';
 import 'card1.dart';
+import 'card2.dart';
+import 'card3.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,10 +21,8 @@ class _HomeState extends State<Home> {
     const Card1(),
     //  card 2
     const Card2(),
-    // TODO Replace with card 3
-    Container(
-      color: Colors.blueAccent,
-    ),
+    //  card 3
+    const Card3(),
   ];
 // Fucntion handling tapeed bar items it notifies the framwework that state of this object has changed and rebuilds the object internally
   void _onItemTapped(int index) {
